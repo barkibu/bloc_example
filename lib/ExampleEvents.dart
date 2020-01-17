@@ -1,0 +1,1 @@
+enum ExampleEvent { chooseDog, chooseCat}
