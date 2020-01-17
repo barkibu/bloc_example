@@ -8,7 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class ExamplePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final ExampleBloc counterBloc = BlocProvider.of<ExampleBloc>(context);
+    final ExampleBloc exampleBloc = BlocProvider.of<ExampleBloc>(context);
 
     return Scaffold(
       appBar: AppBar(title: Text('BLoC Example App')),
@@ -38,7 +38,7 @@ class ExamplePage extends StatelessWidget {
                     height: 128.0,
                   ),
                   onPressed: () {
-                    counterBloc.add(ExampleEvent.chooseDog);
+                    exampleBloc.add(ExampleEvent.chooseDog);
                   },
                 ),
                 FloatingActionButton(
@@ -48,7 +48,7 @@ class ExamplePage extends StatelessWidget {
                     height: 128.0,
                   ),
                   onPressed: () {
-                    counterBloc.add(ExampleEvent.chooseCat);
+                    exampleBloc.add(ExampleEvent.chooseCat);
                   },
                 ),
               ],
