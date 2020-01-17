@@ -12,12 +12,12 @@ class ExamplePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text('BLoC Example App')),
-      body: BlocBuilder<ExampleBloc, int>(
-        builder: (context, count) {
+      body: BlocBuilder<ExampleBloc, String>(
+        builder: (context, sound) {
           return Center(
             child: Text(
-              '$count',
-              style: TextStyle(fontSize: 24.0),
+              '$sound',
+              style: TextStyle(fontSize: 40.0),
             ),
           );
         },

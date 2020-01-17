@@ -2,18 +2,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'ExampleEvents.dart';
 
-class ExampleBloc extends Bloc<ExampleEvent, int> {
+class ExampleBloc extends Bloc<ExampleEvent, String> {
   @override
-  int get initialState => 0;
+  String get initialState => "WOOF!";
 
   @override
-  Stream<int> mapEventToState(ExampleEvent event) async* {
+  Stream<String> mapEventToState(ExampleEvent event) async* {
     switch (event) {
       case ExampleEvent.chooseDog:
-        yield 0;
+        yield "WOOF!";
         break;
       case ExampleEvent.chooseCat:
-        yield 1;
+        yield "MEOW!";
         break;
     }
   }
